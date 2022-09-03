@@ -184,14 +184,6 @@ html {scroll-behavior: smooth;}
         margin-top: 4px;
     }
 
-    .contact {
-        padding-left: 100px;
-    }
-
-    .support-wrapper {
-        width: 65%;
-    }
-
     .footer-right .h2 {
         font-size: 0.9rem !important;
     }
@@ -214,6 +206,9 @@ html {scroll-behavior: smooth;}
 }
 
 @media screen and (max-width: 550px) {
+    .support-wrapper {
+        width: 100%;
+    }
     .wrapper {
         width: 96%;
     }
@@ -238,19 +233,8 @@ html {scroll-behavior: smooth;}
     }
 
     .contact {
-        padding-left: 68px;
+        width: 100%;
         font-size: 2rem;
-    }
-
-    .social-link {
-        padding: 12px 15px;
-    }
-
-    .support-social-list {
-        margin-left: 120px;
-    }
-    .support-wrapper {
-        width: 65%;
     }
 
     .footer-info {
@@ -300,13 +284,5 @@ html {scroll-behavior: smooth;}
 
     .nav-logo img {
         height: 2rem;
-    }
-
-    .support-wrapper {
-        width: 60%;
-    }
-
-    .contact {
-        padding-left: 60px;
     }
 }
