@@ -1,0 +1,520 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  padding-right: unset !important;
+  overflow: visible !important;
+  font-family: 'Rubik', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+html { scroll-behavior: smooth; }
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    transition: padding 0.4s ease;
+}
+
+#header.active {
+    background-color: #02061d;
+    box-shadow: 0 1px 3px rgba(222, 218, 218, 0.1);
+    padding-top: 8px;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar > * {
+    padding: 20px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+.tech-coin {
+  margin-left: 0.8rem;
+  letter-spacing: 3px;
+  color: white;
+  margin-bottom: 0;
+}
+.nav-logo {
+    padding-left: 0;
+}
+
+.nav-list {
+    padding-right: 0;
+}
+
+.nav-logo img {
+    height: 44px;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    margin-top: 5px;
+}
+
+.nav-items > * {
+    margin-left: 30px;
+}
+
+.link-item {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.link-item:hover {
+  color: white;
+}
+
+.link-item.active {
+  color: white;
+}
+
+.content {
+    position: relative;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+.link-item {
+    position: relative;
+}
+
+.link-item::after {
+    --scale: 0;
+    
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) scale(var(--scale));
+    background: white;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+  }
+
+  .link-item.active::after{ --scale: 1; }
+  
+  .link-item:is(:hover, :focus)::after { --scale: 1; }
+
+  /* Home */
+  #home .container {
+    max-width: 100%;
+    position: relative;
+    padding: 0;
+  }
+  .home-img img {
+    object-fit: contain;
+    max-width: 80%;
+    margin: auto;
+    display: block;
+  }
+
+  #home .home-content .wrapper {
+    display: flex;
+  }
+
+  .home-introduce {
+    width: 60%;
+  }
+
+  .home-content {
+    position: absolute;
+    top: 15%;
+    z-index: 6;
+  }
+
+  .home-title {
+    color: white;
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .home-text {
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 10px;
+  }
+
+  .tech-app {
+    display: none;
+  }
+
+  /* Services */
+  .service {
+    background-color: #292851;
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+
+  .service-title {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+    padding-bottom: 40px;
+    padding-top: 2rem;
+  }
+
+  .service .wrapper {
+    display: block !important;
+  }
+
+  .service-container {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 30px;
+  }
+
+  .service-card {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 20px rgb(27 25 63 / 50%);
+    background: linear-gradient(to bottom,#383675,#161535);
+    color: #aeaecc;
+    padding: 20px;
+  }
+
+  .service-container button {
+    border: none;
+  }
+
+  .service-card:hover {
+    background: linear-gradient(to bottom,#42407f,#161535);
+    color: #fff;
+  }
+
+  .service-card i {
+    color: #f5f5f7;
+    font-size: 40px;
+  }
+
+  .service-card p {
+    padding-top: 10px;
+  }
+
+  /* Price */
+    #price {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    .price .wrapper {
+      background-color: #f5f5f7 ;
+    }
+
+    .price-title {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .price-content {
+      max-width: 92%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 1rem;
+    }
+
+    .price-card {
+      text-align: center;
+      background-color: #ffffff;
+      margin: 1rem 0;
+      border-radius: 10px;
+      border: 1px solid rgba(163, 151, 151, 0.16);
+    }
+
+    .price-card-icon {
+      padding: 2rem 0;
+    }
+
+    .price-card-title h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .price-card-description {
+      font-size: 1rem;
+    }
+
+    .price-card-note {
+      font-size: 0.9rem;
+      margin: 0 1rem;
+    }
+
+    .price-note {
+      padding: 0 1rem;
+    }
+
+    .price-note li {
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+
+    .lien-he {
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0099FF;
+    }
+
+    /* Support */
+    .support-container {
+      position: relative;
+    }
+    .support-container img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .support-wrapper {
+      position: absolute;
+      top: 60%;
+      z-index: 4;
+      width: 80%;
+      margin: auto;
+    }
+
+    .contact {
+      position: absolute;
+      top: 40%;
+      z-index: 4;
+      color: white;
+      text-align: center;
+      font-size: 48px;
+      width: 80%;
+      padding-left: 190px;
+      letter-spacing: 4px;
+      font-weight: 400;
+    }
+
+    #support .bg-overlay-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      opacity: .9;
+      background-color: #000000;
+    }
+
+    .support-social-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-left: 180px;
+    }
+
+    .support-social-list li {
+      margin-right: 20px;
+    }
+    
+    .social-link {
+      border: 2px solid #66FCF1;
+      padding: 20px 23px;
+      border-radius: 50%;
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      transition: all 0.3s ease-in;
+    }
+
+    .social-link:hover {
+      background-color: #ffffff;
+      border: 2px solid #ffffff;
+      color: #082222;
+      font-size: 24px;
+    }
+
+   /* Footer */
+   .footer {
+    padding-top: 60px;
+   }
+
+   .footer-coin {
+    text-align: center;
+   }
+    
+   /* Go Top */
+
+   .go-top {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    text-decoration: none;
+    border-radius: 50%;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 20px;
+    background: #1b70f0;
+    color: #fff;
+    transition: all 0.4s ease-in;
+    z-index: 9999;
+   }
+
+   .go-top:hover {
+    color: white !important;
+   }
+
+   .go-top.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .footer-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding-bottom: 40px;
+  }
+
+  .h2 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+
+  .footer-right .h2 {
+    padding-left: 1.6rem;
+  }
+
+  .footer-list li {
+    padding-bottom: 10px;
+  }
+
+  .footer-social .footer-list {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    row-gap: 10px;
+  }
+
+  .footer-social-link {
+    font-size: 36px;
+    color: #1b70f0;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+  }
+
+  .footer-social-link:hover {
+    padding: 4px;
+    opacity: 1;
+  }
+
+  .link-ins {
+    color: #E4405F !important;
+  }
+  .link-fb {
+    color: #1877F2 !important;
+  }
+  .link-tel {
+    color: #0099FF !important;
+  }
+  .link-tw {
+    color: #1DA1F2 !important;
+  }
+
+  .link-mail, .link-phone {
+    color: #000000;
+    transition: all 0.4s ease;
+  }
+
+  .link-mail:hover, .link-phone:hover {
+    color: #0099FF;
+  }
+
+  .footer-right li {
+    font-size: 18px;
+  }
+
+  /* Modal */
+
+  .modal-title {
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: 600;
+  }
+
+  .email-content p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .email-content img {
+    width: 61%;
+  }
+
+  .modal-footer {
+    justify-content: flex-start !important;
+  }
+
+  .modal-footer ul {
+    display: flex;
+  }
+
+  .modal-footer .h4 {
+    font-size: 1.2rem;
+  }
+
+  .modal-footer .footer-social-link {
+    padding-right: 1.4rem;
+  }
+
+  .modal-footer .link-ins:hover {
+    color: #E4405F;
+    opacity: 1;
+  }
+
+  .token {
+    width: 60%;
+  }
+
+  .nav-bars {
+    display: none;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  .nav-list img {
+    display: none;
+  }
