@@ -167,6 +167,9 @@ html {scroll-behavior: smooth;}
     .home-introduce {
         width: 100%;
     }
+    .footer-social .h2 {
+        padding-left: 1rem;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -207,6 +210,7 @@ html {scroll-behavior: smooth;}
 
     .footer-social .h2 {
         font-size: 0.9rem !important;
+        padding-left: 2rem;
     }
 
     .footer-right li {
