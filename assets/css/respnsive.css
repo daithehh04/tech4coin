@@ -131,6 +131,9 @@ html {scroll-behavior: smooth;}
       .price-card-title h3 {
         font-size: 1.5rem;
       }
+      .footer-social .h2 {
+        padding-left: 1rem;
+    }
 } 
 
 @media screen and (max-width: 992px) {
@@ -144,6 +147,7 @@ html {scroll-behavior: smooth;}
 
     .footer-social .h2 {
         font-size: 1.2rem !important;
+        padding-left: 1rem;
     }
 
     .price-content {
