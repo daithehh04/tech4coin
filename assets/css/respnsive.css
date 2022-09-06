@@ -169,6 +169,18 @@ html {scroll-behavior: smooth;}
     }
 }
 
+@media screen and (max-width: 900px) {
+    .contact-left {
+        display: none;
+    }
+
+    .container-contact {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+
 @media screen and (max-width: 768px) {
     .home-title {
         font-size: 22px;
@@ -183,6 +195,11 @@ html {scroll-behavior: smooth;}
         font-size: 0.8rem;
         margin-top: 4px;
     }
+
+    .contact-title label {
+        font-size: 2rem;
+        font-weight: 600;
+      }
 
     .footer-right .h2 {
         font-size: 0.9rem !important;
@@ -281,6 +298,17 @@ html {scroll-behavior: smooth;}
     .service-title {
         font-size: 2rem;
     }
+
+    .contact-title label {
+        font-size: 1.8rem;
+    }
+    .contact-form div {
+        display: block;
+    }
+
+    .contact-form input:first-child {
+        margin-bottom: 0.5rem;
+      }
 
     .nav-logo img {
         height: 2rem;

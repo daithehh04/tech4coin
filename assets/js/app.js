@@ -1,3 +1,4 @@
+// active link
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -41,3 +42,23 @@ bars.onclick = function () {
 closeBtn.onclick = function () {
     navList.classList.remove('active');
 }
+
+// Contact
+
+const submit = $('.btn-send');
+const contactForm = $('.contact-form');
+const contactText = $('.contact-right-text');
+
+// var check_form = true;
+const form = $('.contact-form');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const ten = $('#your_name').value;
+    const mail = $('#your_email').value;
+    console.log(mail)
+    const text = $('#your_text').value;
+    if (ten != '' && mail != '' && text != '') {
+        contactText.style.opacity = '1';
+        contactForm.style.display = 'none';
+    }
+})
